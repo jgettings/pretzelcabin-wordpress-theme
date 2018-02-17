@@ -1,0 +1,11 @@
+.footer {
+	background-color: theme-color('primary');
+	color: $white;
+	border-top: 1px solid $gray-600;
+
+	.copy {
+		font-size: $font-size-sm;
+		padding: 10px;
+		text-align: center;
+	}
+}
