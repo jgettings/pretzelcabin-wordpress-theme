@@ -42,6 +42,10 @@ register_sidebar(array(
 register_sidebar(array(
 		'name' => __('Footer', 'pretzel-cabin'),
 		'id' => 'footer-widgets',
+    'before_widget' => '<div id="%1$s" class="widget col-sm">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h4 class="widget-title">',
+    'after_title'   => '</h4>',
     'description' => __( 'These widgets will display in the footer.', 'pretzel-cabin')
   ));
 

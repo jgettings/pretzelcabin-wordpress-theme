@@ -2,6 +2,41 @@
 	background-color: theme-color('primary');
 	color: $white;
 	border-top: 1px solid $gray-600;
+	padding-top: 10px;
+
+	#subscribe-text {
+		font-size: 8pt;
+
+	}
+
+	label, .screen-reader-text {
+		display: none;
+	}
+
+	.widget {
+		padding: 10px;
+	}
+
+	input, select {
+		border-radius: 5px;
+		padding: 1px 7px;
+		border: 1px #64a8d1 solid;
+	}
+
+	ul {
+		display: flex;
+    list-style-type: none;
+    padding-left: 0;
+
+		li {
+			display: flex;
+			margin: 0 10px;
+		}
+
+		a {
+			color: white;
+		}
+	}
 
 	.copy {
 		font-size: $font-size-sm;
