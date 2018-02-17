@@ -5,5 +5,10 @@
 @import 'navigation';
 @import 'footer';
 @import 'sidebar';
+@import 'pagination';
+@import 'archive';
 
+.screen-reader-text {
+	display: none;
+}
 

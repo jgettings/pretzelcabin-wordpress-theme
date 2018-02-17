@@ -1,0 +1,13 @@
+.pagination-nav {
+
+  .hidden-sm-down {
+  	display: none;
+  }
+
+  @media (min-width: map-get($grid-breakpoints, "lg")) {
+    .hidden-sm-down {
+    	display: inline;
+    }
+  }
+
+}

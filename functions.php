@@ -36,8 +36,8 @@ register_nav_menus( array(
 register_sidebar(array(
 		'name' => __('SideBar', 'pretzel-cabin'),
 		'id' => 'side-widgets',
-		'before_widget' => '<div id="%1$s" class="widget card">',
-    'after_widget'  => '</div>',
+		'before_widget' => '<div id="%1$s" class="widget card"><div class="card-body">',
+    'after_widget'  => '</div></div>',
     'before_title'  => '<h4 class="widget-title">',
     'after_title'   => '</h4>',
     'description' => __( 'These widgets will display on the right side of the screen.', 'pretzel-cabin')
@@ -67,6 +67,16 @@ function pretzelcabin_new_nav_menu_items($items, $args) {
 	  return $items;
 }
 add_filter('wp_nav_menu_items', 'pretzelcabin_new_nav_menu_items', 10, 2);
+
+
+function pretzelcabin_excerpt_more($more) {
+    return sprintf('... <a class="read-more" href="%1$s">%2$s</a>',
+        get_permalink(get_the_ID()),
+        __('Read More', 'pretzel-cabin')
+    );
+}
+add_filter('excerpt_more', 'pretzelcabin_excerpt_more');
+
 
 require_once('util/wp-bootstrap-navwalker.php');
 

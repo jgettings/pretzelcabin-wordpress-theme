@@ -3,27 +3,47 @@
 <div class="container-fluid">
     <div class="row">
 
-        <div class="col-md">
+        <div class="col-lg archive-col">
             <?php
             if ( have_posts() ) :
-                while ( have_posts() ) : the_post();
-                    get_template_part( 'content', get_post_format() );
+                while ( have_posts() ) : the_post(); ?>
+
+                    <div class="card">
+
+                        <?php
+                        if (has_post_thumbnail()) :
+                            the_post_thumbnail('', array('class' => 'card-img-top', 'alt' => 'Image for ' . get_the_title()));
+                        endif;
+                        ?>
+
+                        <div class="card-body">
+
+                            <h3 class="card-title">
+                                <a href="<?php the_permalink(); ?>" rel="bookmark" title="Link to <?php the_title_attribute(); ?>">
+                                    <?php the_title(); ?>    
+                                </a>
+                            </h3>
+
+                            <small><?php the_time('F jS, Y'); ?> by <?php the_author_posts_link(); ?></small>
+
+                            <p class="card-text">
+                                <?php the_excerpt(); ?>
+                            </p>
+
+                        </div>
+                    </div>
+
+                <?php
                 endwhile;					
             else :
-                get_template_part( 'content', 'none' );
+                echo _e('It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'pretzel-cabin'); 
             endif;
-
-
-            the_posts_pagination(array(
-                'prev_text'          => __( '&lt;&lt;', 'pretzel-cabin'),
-                'next_text'          => __( '&gt;&gt;', 'pretzel-cabin'),
-                'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'pretzel-cabin' ) . ' </span>',
-            )); 
-
+            
+            include('pagination.php');
             ?>
         </div>
 
-        <div class="col-md-4 sidebar">
+        <div class="col-lg-4 sidebar">
             <?php dynamic_sidebar('SideBar'); ?>
         </div>
     </div>  

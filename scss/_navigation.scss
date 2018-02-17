@@ -48,7 +48,7 @@
 	}
 }
 
-@media (min-width: 992px) {
+@media (min-width: map-get($grid-breakpoints, "lg")) {
 	.navbar-background {
 	  background-position: center 40%;
 	  height: 224px;

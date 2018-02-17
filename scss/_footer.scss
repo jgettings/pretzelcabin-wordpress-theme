@@ -9,7 +9,7 @@
 
 	}
 
-	label, .screen-reader-text {
+	label {
 		display: none;
 	}
 
@@ -35,6 +35,11 @@
 
 		a {
 			color: white;
+
+			&:hover {
+				text-decoration: none;
+				color: $gray-300;
+			}
 		}
 	}
 
