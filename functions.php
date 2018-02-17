@@ -36,6 +36,10 @@ register_nav_menus( array(
 register_sidebar(array(
 		'name' => __('SideBar', 'pretzel-cabin'),
 		'id' => 'side-widgets',
+		'before_widget' => '<div id="%1$s" class="widget card">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h4 class="widget-title">',
+    'after_title'   => '</h4>',
     'description' => __( 'These widgets will display on the right side of the screen.', 'pretzel-cabin')
   ));
 

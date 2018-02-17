@@ -1,0 +1,26 @@
+.sidebar {
+	font-size: $font-size-sm;
+
+	.card {
+		background-color: $cyan;
+		border: none;
+    border-radius: 0;
+    margin: 10px;
+    padding: 15px;
+		font-size: $font-size-sm;
+		display: block;
+	}
+
+	img {
+		float: left;
+		margin-right: 15px;
+	}
+
+	ul {
+		padding: 0;
+	}
+
+	li {
+		list-style: none;
+	}
+}
