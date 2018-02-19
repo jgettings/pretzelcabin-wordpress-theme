@@ -101,6 +101,10 @@
 			background-color: $gray-600;
 			margin-right: 5px;
 			padding: 0;
+
+			.nav-item {
+				background-color: inherit;
+			}
 		}
 	}
 	.navbar-dark .main-menu .nav-item {
@@ -109,7 +113,7 @@
 	  }
 	  &.active {
 	  	background-color: white;
-		  border: 1px solid $gray-600;
+		  border: 0px solid $gray-600;
 		  border-bottom: 1px white solid;
 
 	  	.nav-link {

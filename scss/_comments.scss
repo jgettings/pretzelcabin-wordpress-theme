@@ -1,0 +1,41 @@
+.comments {
+	margin-bottom: 10px;
+
+	.card {
+		margin: 0;
+	}
+
+	.card-header {
+		padding: 0;
+
+		.fa-caret-right {
+	  	display: none;
+		}
+		.fa-caret-down {
+			display: inline;
+		}
+
+		.collapsed  {
+			.fa-caret-right {
+		  	display: inline;
+			}
+			.fa-caret-down {
+				display: none;
+			}
+		}
+	}
+
+	h3 {
+		margin: 0;
+
+		.btn {
+		  font-size: $h3-font-size;
+		}
+	}
+
+	.comment-form {
+		textarea {
+			width: 100%;
+		}
+	}
+}

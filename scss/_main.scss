@@ -1,4 +1,4 @@
-.archive-col {
+.main-col {
 
 	.card {
 		background-color: $gray-200;
@@ -17,4 +17,24 @@
 		height: auto;
 		border-radius: 0;
 	}
+
+	.card-text {
+		margin-top: 10px;
+		
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	blockquote {
+		font-size: $font-size-lg;
+		margin: 20px 40px;
+	}
+
 }
+
+.tooltip-inner {
+	text-align: left;
+}
+

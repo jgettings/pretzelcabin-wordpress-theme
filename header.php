@@ -67,7 +67,7 @@
         	'menu_class' => 'navbar-nav main-menu ml-auto',
         	'theme_location' => 'primary',
         	'menu' => 'top_menu',
-				  'depth' => 0,
+				  'depth' => 2,
 				  'walker' => new wp_bootstrap_navwalker(),
 				  'fallback_cb'		=> 'WP_Bootstrap_Navwalker::fallback'
 				));

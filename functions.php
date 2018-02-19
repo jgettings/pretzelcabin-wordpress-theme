@@ -14,16 +14,17 @@
 // Exit if accessed directly
 if ( !defined( 'ABSPATH' ) ) exit;
 
+include('functions_pagination.php');
 
 function pretzelcabin_scripts()
 {
-    //wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
     wp_enqueue_style('styles', get_stylesheet_directory_uri() . '/css/index.css');
-    //wp_enqueue_style('style', get_stylesheet_uri());
 
+    //TODO stop using cdn.
 		wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js');
 		wp_enqueue_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', array('jquery'));
 		wp_enqueue_script('font-awesome', 'https://use.fontawesome.com/releases/v5.0.6/js/all.js');
+		wp_enqueue_script('pretzel-cabin', get_stylesheet_directory_uri() . '/pretzel-cabin.js', array('jquery'));
 }
 add_action( 'wp_enqueue_scripts', 'pretzelcabin_scripts' );
 
@@ -38,8 +39,8 @@ register_sidebar(array(
 		'id' => 'side-widgets',
 		'before_widget' => '<div id="%1$s" class="widget card"><div class="card-body">',
     'after_widget'  => '</div></div>',
-    'before_title'  => '<h4 class="widget-title">',
-    'after_title'   => '</h4>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
     'description' => __( 'These widgets will display on the right side of the screen.', 'pretzel-cabin')
   ));
 
