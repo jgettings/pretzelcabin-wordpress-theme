@@ -1,20 +1,10 @@
 <?php
 
-/**
- * TODO
- * - move tabs
- * - top logo image
- * - favicon
- * - Better responsiveness
- * 	 - social icons on the top
- * 	 - stuff doesn't center
- * 	 - top image
- */
-
 // Exit if accessed directly
 if ( !defined( 'ABSPATH' ) ) exit;
 
 include('functions_pagination.php');
+include('functions_comments.php');
 
 function pretzelcabin_scripts()
 {

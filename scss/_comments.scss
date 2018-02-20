@@ -38,4 +38,23 @@
 			width: 100%;
 		}
 	}
+
+	.card-body-no-padding {
+		padding: 0;
+		padding-bottom: 10px;
+	}
+
+	.comment-card {
+		background-color: $gray-300;
+		margin-bottom: 10px;
+
+		cite {
+			margin-left: 10px;
+		}
+
+		.commentmetadata {
+			float: right;
+			text-align: right;
+		}
+	}
 }

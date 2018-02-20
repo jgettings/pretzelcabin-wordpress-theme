@@ -3,6 +3,8 @@
 if (post_password_required()) {
 	return;
 }
+
+$currentCommentsPage = get_query_var('cpage');
 ?>
 
 
@@ -67,11 +69,14 @@ if (post_password_required()) {
 	endif;
 
   if (have_comments()):
+  	$expanded = $currentCommentsPage > 1;
   ?>
   <div class="card">
     <div class="card-header" id="headingComments">
       <h3>
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseComments" aria-expanded="false" aria-controls="collapseComments">
+        <button class="btn btn-link <?php echo $expanded ? '' : 'collapsed'; ?>" data-toggle="collapse" 
+        		data-target="#collapseComments" aria-expanded="<?php echo $expanded ? 'true' : 'false'; ?>"
+        		aria-controls="collapseComments">
           <i class="fas fa-caret-right"></i>
           <i class="fas fa-caret-down"></i>
           <?php
@@ -82,30 +87,14 @@ if (post_password_required()) {
         </button>
       </h3>
     </div>
-    <div id="collapseComments" class="collapse" aria-labelledby="headingComments" data-parent="#comments">
-      <div class="card-body">
-
-				<ol class="commentlist">
-					<?php
-						wp_list_comments(array(
-							'style'       => 'ul',
-							'short_ping'  => true,
-							'avatar_size' => 50,
-						));
-					?>
-				</ol>
+    <div id="collapseComments" class="<?php echo $expanded ? '' : 'collapse'; ?>" aria-labelledby="headingComments" data-parent="#comments">
+      <div class="card-body card-body-no-padding">
 
 				<?php
+				wp_list_comments(array('style' => 'ul', 'short_ping' => true, 'avatar_size' => 50, 'callback' => pretzelcabin_comments));
+
 				if (get_comment_pages_count() > 1 && get_option('page_comments')){
-					// TODO idk how to tell what the current page is
-
-					// fix this
-          pretzelcabin_displayPagination(1, get_comment_pages_count(), get_pagenum_link);
-					
-					// the real way
-					paginate_comments_links(array(
-
-					));
+          pretzelcabin_displayPagination($currentCommentsPage, get_comment_pages_count(), pretzelcabin_comments_pagenum_link);
 				}
 				?>
 

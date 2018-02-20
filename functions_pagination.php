@@ -57,4 +57,13 @@ function pretzelcabin_displayPagination($currentPage, $totalPages, $pageLinkFunc
 	echo '</ul></nav>';
 }
 
+function pretzelcabin_comments_pagenum_link($page) {
+  global $wp_rewrite;
+
+  if ($wp_rewrite->using_permalinks())
+		return user_trailingslashit(trailingslashit(get_permalink()) . $wp_rewrite->comments_pagination_base . '-' . $page, 'commentpaged');
+
+  return add_query_arg('cpage', $page_comments);
+}
+
 ?>
