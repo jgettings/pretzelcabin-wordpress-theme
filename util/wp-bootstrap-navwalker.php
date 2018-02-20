@@ -140,9 +140,9 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 				$classes[] = 'active';
 			}
 
-			if ($args->collapse) {
-				$classes[] = 'col-auto';
-			}
+			// if ($args->collapse) {
+			// 	$classes[] = 'col-auto';
+			// }
 
 			// Add some additional default classes to the item.
 			$classes[] = 'menu-item-' . $item->ID;

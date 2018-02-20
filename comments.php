@@ -91,10 +91,10 @@ $currentCommentsPage = get_query_var('cpage');
       <div class="card-body card-body-no-padding">
 
 				<?php
-				wp_list_comments(array('style' => 'ul', 'short_ping' => true, 'avatar_size' => 50, 'callback' => pretzelcabin_comments));
+				wp_list_comments(array('style' => 'ul', 'short_ping' => true, 'avatar_size' => 50, 'callback' => "pretzelcabin_comments"));
 
 				if (get_comment_pages_count() > 1 && get_option('page_comments')){
-          pretzelcabin_displayPagination($currentCommentsPage, get_comment_pages_count(), pretzelcabin_comments_pagenum_link);
+          pretzelcabin_displayPagination($currentCommentsPage, get_comment_pages_count(), "pretzelcabin_comments_pagenum_link");
 				}
 				?>
 

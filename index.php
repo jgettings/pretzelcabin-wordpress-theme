@@ -16,13 +16,13 @@
             endif;
             
             if (is_singular()) {
-                pretzelcabin_displayPagination($page, $numpages, pretzelcabin_pagelink_singular);
+                pretzelcabin_displayPagination($page, $numpages, "pretzelcabin_pagelink_singular");
 
             } else {
                 $paged = get_query_var('paged') ? absint(get_query_var('paged')) : 1;
                 $pages = $wp_query->max_num_pages;
 
-                pretzelcabin_displayPagination($paged, $pages, get_pagenum_link);
+                pretzelcabin_displayPagination($paged, $pages, "get_pagenum_link");
             }
             ?>
         </div>
