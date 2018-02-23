@@ -1,0 +1,24 @@
+{
+  "name": "pretzel-cabin",
+  "version": "1.0.0",
+  "description": "A custom theme for our blog",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass --style=compressed scss/index.scss css/index.css",
+    "sass-watch": "node-sass --style=compressed --watch scss/index.scss css/index.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgettings/pretzelcabin-wordpress-theme.git"
+  },
+  "author": "Jen Gettings",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jgettings/pretzelcabin-wordpress-theme/issues"
+  },
+  "homepage": "https://github.com/jgettings/pretzelcabin-wordpress-theme#readme",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
+}
