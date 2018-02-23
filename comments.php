@@ -55,7 +55,7 @@ $currentCommentsPage = get_query_var('cpage');
         comment_form(array(
         	'title_reply' => '',
         	'class_submit' => 'btn btn-primary',
-        	'comment_field' =>  '<p class="comment-form-comment"><label for="comment" class="sr-only">' . _x( 'Comment', 'noun' ) .
+        	'comment_field' =>  '<p class="comment-form-comment"><label for="comment" class="sr-only">' . _x('Comment', 'noun', 'pretzel-cabin') .
 				    '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true">' .
 				    '</textarea></p>',
 				  //'comment_notes_before' => '',

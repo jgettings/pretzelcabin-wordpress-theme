@@ -11,14 +11,14 @@ function pretzelcabin_comments($comment, $args, $depth) {
 		      <?php edit_comment_link('<i class="fas fa-edit"></i><span class="sr-only">(Edit)</span><br/>'); ?>
 
 	    		<small class="text-muted">
-			      <?php printf(__('%1$s at %2$s'), get_comment_date(), get_comment_time()); ?>
+			      <?php printf(__('%1$s at %2$s', 'pretzel-cabin'), get_comment_date(), get_comment_time()); ?>
 			    </small>
 		    </div>
 
 	    	<h5 class="comment-author vcard"><?php 
 		      echo get_avatar( $comment, $args['avatar_size'] ); 
 		      
-		      printf(__('<cite class="fn">%s</cite>'), get_comment_author_link()); ?>
+		      printf(__('<cite class="fn">%s</cite>', 'pretzel-cabin'), get_comment_author_link()); ?>
 		    </h5>
 	    </div>
 
@@ -26,7 +26,7 @@ function pretzelcabin_comments($comment, $args, $depth) {
 
 	    <?php if ($comment->comment_approved == '0') : ?>
 	      <h6 class="comment-awaiting-moderation card-subtitle mb-2 text-muted">
-	      	<?php _e('Your comment is awaiting moderation.'); ?>
+	      	<?php _e('Your comment is awaiting moderation.', 'pretzel-cabin'); ?>
 	      </h6>
 	      <hr/>
 	    <?php endif; ?>

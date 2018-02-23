@@ -16,7 +16,13 @@
 
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 
-	<?php wp_head(); ?>   
+	<?php
+	if (is_singular()) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+
+	wp_head();
+	?>   
 </head>
 
 <body <?php body_class(); ?>>

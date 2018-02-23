@@ -6,6 +6,12 @@ if ( !defined( 'ABSPATH' ) ) exit;
 include('functions_pagination.php');
 include('functions_comments.php');
 
+if ( ! isset( $content_width ) ) $content_width = 700;
+
+add_theme_support("automatic-feed-links");
+add_theme_support("post-thumbnails");
+
+
 function pretzelcabin_scripts()
 {
     wp_enqueue_style('styles', get_stylesheet_directory_uri() . '/css/index.css');
@@ -24,7 +30,8 @@ register_nav_menus( array(
 	'social' => __('Social Menu', 'pretzel-cabin')
 ) );
 
-register_sidebar(array(
+function pretzelcabin_widgets_init() {
+	register_sidebar(array(
 		'name' => __('SideBar', 'pretzel-cabin'),
 		'id' => 'side-widgets',
 		'before_widget' => '<div id="%1$s" class="widget card"><div class="card-body">',
@@ -34,7 +41,7 @@ register_sidebar(array(
     'description' => __( 'These widgets will display on the right side of the screen.', 'pretzel-cabin')
   ));
 
-register_sidebar(array(
+	register_sidebar(array(
 		'name' => __('Footer', 'pretzel-cabin'),
 		'id' => 'footer-widgets',
     'before_widget' => '<div id="%1$s" class="widget col-sm">',
@@ -43,6 +50,9 @@ register_sidebar(array(
     'after_title'   => '</h4>',
     'description' => __( 'These widgets will display in the footer.', 'pretzel-cabin')
   ));
+}
+add_action('widgets_init', 'pretzelcabin_widgets_init');
+
 
 function pretzelcabin_new_nav_menu_items($items, $args) {
 	  if ($args->theme_location == 'social') {
