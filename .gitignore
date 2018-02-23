@@ -18,3 +18,4 @@ wp-content/plugins/hello.php
 
 *.scssc
 node_modules
+css
