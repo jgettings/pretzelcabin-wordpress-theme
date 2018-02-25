@@ -19,3 +19,5 @@ wp-content/plugins/hello.php
 *.scssc
 node_modules
 css
+popper.min.js
+bootstrap.min.js

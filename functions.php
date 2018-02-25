@@ -16,11 +16,10 @@ function pretzelcabin_scripts()
 {
     wp_enqueue_style('styles', get_stylesheet_directory_uri() . '/css/index.css');
 
-    //TODO stop using cdn.
-		wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js');
-		wp_enqueue_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', array('jquery'));
-		wp_enqueue_script('font-awesome', 'https://use.fontawesome.com/releases/v5.0.6/js/all.js');
-		wp_enqueue_script('pretzel-cabin', get_stylesheet_directory_uri() . '/pretzel-cabin.js', array('jquery'));
+		wp_enqueue_script('popper', get_stylesheet_directory_uri() . '/js/popper.min.js', array(), '1.12.9');
+		wp_enqueue_script('bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.min.js', array('jquery', 'popper'), '4.0.0');
+		wp_enqueue_script('font-awesome', get_stylesheet_directory_uri() . '/js/fontawesome.js', array(), '5.0.6');
+		wp_enqueue_script('pretzel-cabin', get_stylesheet_directory_uri() . '/js/pretzel-cabin.js', array('jquery'), '1.0.0');
 }
 add_action( 'wp_enqueue_scripts', 'pretzelcabin_scripts' );
 
