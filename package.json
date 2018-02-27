@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "node-sass --output-style=compressed --source-map css scss/index.scss css/index.css",
     "sass-watch": "node-sass --output-style=compressed --source-map css --watch --source-map scss/index.scss css/index.css",
-    "postinstall": "copyfiles -f node_modules/popper.js/dist/umd/popper.min.js node_modules/bootstrap/dist/js/bootstrap.min.js js"
+    "postinstall": "copyfiles -f node_modules/popper.js/dist/umd/popper.min.js node_modules/bootstrap/dist/js/bootstrap.min.js js",
+    "zip": "zip pretzel-cabin.zip -r ./ -x node_modules/\\* -x .\\* -x scss/\\* -x package.json -x */.DS_Store",
+    "build": "npm run sass && npm run zip"
   },
   "repository": {
     "type": "git",
