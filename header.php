@@ -7,7 +7,7 @@
   <meta http-equiv="content-type" content="text/html; charset=<?php bloginfo( 'charset' ); ?>" />
   
   <link rel="profile" href="https://gmpg.org/xfn/11" />
-  <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lobster+Two|Lora" rel="stylesheet">
   <meta name="p:domain_verify" content="32c8b916853cfc1c8199870049dfa8ae"/>
 
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
