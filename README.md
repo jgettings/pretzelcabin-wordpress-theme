@@ -44,4 +44,6 @@ npm run sass-watch
 In order to easily add the theme to a wordpress site, you want to build a zip file to upload. There should be an up-to-date one committed
 with each version update in case people want to grab it and use it somewhere else.
 
-TODO
+```
+npm run build
+```

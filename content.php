@@ -70,7 +70,7 @@
 	    <?php endforeach; ?>
 		</div>
 
-		<?php if (is_search()): ?>
+		<?php if (is_home() || is_search() || is_category() || is_archive()): ?>
       <p class="card-text">
           <?php the_excerpt(); ?>
       </p>
