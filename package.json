@@ -1,15 +1,17 @@
 {
   "name": "pretzel-cabin",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A custom theme for our blog",
   "main": "index.php",
   "scripts": {
+    "build": "npm run sass && npm run zip && npm run placeholder-copy && npm run placeholder-zip",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node-sass         --output-style=compressed --source-map css scss/index.scss css/index.css",
+    "sass": "node-sass --output-style=compressed --source-map css scss/index.scss css/index.css",
     "sass-watch": "node-sass --watch --output-style=compressed --source-map css scss/index.scss css/index.css",
     "postinstall": "copyfiles -f node_modules/popper.js/dist/umd/popper.min.js node_modules/bootstrap/dist/js/bootstrap.min.js js",
     "zip": "zip pretzel-cabin.zip -r ./ -x node_modules/\\* -x .\\* -x scss/\\* -x package.json -x placeholder/\\* -x */.DS_Store",
-    "build": "npm run sass && npm run zip"
+    "placeholder-copy": "copyfiles css/*.css images/* js/fontawesome.js util/* favicon.ico placeholder/",
+    "placeholder-zip": "zip pretzel-cabin-placeholder.zip -r ./placeholder/ -x */.DS_Store"
   },
   "repository": {
     "type": "git",

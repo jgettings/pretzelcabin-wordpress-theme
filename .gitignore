@@ -21,3 +21,7 @@ node_modules
 css
 popper.min.js
 bootstrap.min.js
+favicon.ico
+placeholder/images
+placeholder/js
+placeholder/util
