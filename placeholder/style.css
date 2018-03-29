@@ -1,0 +1,28 @@
+/*
+Theme Name: Pretzel Cabin Placeholder
+Theme URI: https://github.com/jgettings/pretzelcabin-wordpress-theme/
+Author: Jen Gettings
+Author URI: http://www.pretzelcabin.com
+Description: A placeholder page matching the custom theme for our blog
+Tags: placeholder
+Text Domain: pretzelcabin
+Version: 1.0.0
+Updated: 2018-03-28
+License: MIT
+License URI: https://opensource.org/licenses/MIT
+
+*/
+
+.placeholder-page #menu-social {
+    position: static;
+}
+
+.placeholder-page #menu-social .nav-link {
+    border-radius: 10px;
+    height: 43px;
+    padding-top: 10px;
+}
+
+.placeholder-page #menu-social .nav-link:hover {
+    height: 43px;
+}

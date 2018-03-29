@@ -83,4 +83,4 @@ require_once('util/wp-bootstrap-navwalker.php');
 add_theme_support('title-tag');
 
 // remove this for prod
-define('WP_SCSS_ALWAYS_RECOMPILE', true);
+// define('WP_SCSS_ALWAYS_RECOMPILE', true);

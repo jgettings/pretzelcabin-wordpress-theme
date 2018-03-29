@@ -47,3 +47,16 @@ with each version update in case people want to grab it and use it somewhere els
 ```
 npm run build
 ```
+
+
+
+### Placeholder Theme
+
+In order to avoid problems when updating the theme on the live site, I've created a placeholder single page theme that will show when I
+delete the old version and upload the new one. The ```npm run build``` step above will also build the zip for this and it is saved as ```placeholder.zip```
+
+
+- copy images, css
+- copy favicon.ico
+- js fontawesome
+- zip it up
